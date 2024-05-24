@@ -48,3 +48,5 @@ const Footer = () => {
 }
 
 export default Footer
+
+// TODO - Desktop active state for footer links and social icons

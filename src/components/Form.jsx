@@ -16,3 +16,7 @@ const Form = () => {
 }
 
 export default Form
+
+
+// TODO - Mobile view for form section 
+// TODO - Form validation and error state activation
