@@ -7,6 +7,10 @@ import CustomizeIcon from '../images/icon-fully-customizable.svg'
 // TODO - Connect API endpoint, send a GET request for the entered link, get the response and send it as a prop to the ShortenedLink Component
 
 const Advanced = () => {
+
+  const apiUrl = 'https://cleanuri.com/api/v1/shorten';
+
+  fetch()
   return (
     <div className='p-5 md:p-20 relative bg-grayishViolet/[.1]'>
       <Form />

@@ -20,9 +20,13 @@ const Form = () => {
         '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
         '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
 
-    const validateUrl = (url) => {
-        return urlPattern.test(url);
-    };
+        const validateUrl = (url) => {
+            url = url.trim();
+        
+            const encodedUrl = encodeURI(url);
+        
+            return urlPattern.test(encodedUrl);
+        };
 
 
     const handleSubmit = (e) => {
@@ -61,8 +65,8 @@ const Form = () => {
                     <input type="text" placeholder='Shorten a link here...' className={`bg-white placeholder:text-gray z-10 h-[50px] rounded-lg md:flex-1 pl-5 placeholder:font-medium outline-none text-violet font-medium border-[3px] text-veryDarkBlue ${error ? 'border-red placeholder:text-red placeholder:opacity-50' : 'border-transparent'}`} value={link} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
                     <button className='bg-cyan h-[50px] rounded-lg z-10 py-5 px-7 flex items-center justify-center text-white font-semibold text-base outline-none'>Shorten it!</button>
                 </div>
-                <p className={`text-red italic text-sm absolute left-7 bottom-[45%] ${error ? '' : 'hidden'}`}>{validationMessage}</p>
-                <p className={`text-red italic text-sm absolute left-7 bottom-1/2 ${error ? 'hidden' : ''}`}>{validationMessage}</p>
+                <p className={`text-red italic text-sm absolute left-7 md:left-12 bottom-[45%] md:bottom-4 ${error ? '' : 'hidden'}`}>{validationMessage}</p>
+                <p className={`text-red italic text-sm absolute left-7 md:left-10 bottom-[45%] md:bottom-4 ${error ? 'hidden' : ''}`}>{validationMessage}</p>
             </form>
         </div>
     )
