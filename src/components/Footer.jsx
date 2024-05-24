@@ -14,26 +14,26 @@ const Footer = () => {
             <div>
                 <div className='font-semibold text-lg pb-4 text-white'>Features</div>
                 <div className='flex flex-col gap-2 text-white opacity-70 text-base font-light'>
-                    <div>Link Shortening</div>
-                    <div>Branded Links</div>
-                    <div>Analytics</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>Link Shortening</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>Branded Links</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>Analytics</div>
                 </div>
             </div>
             <div>
                 <div className='font-semibold text-lg pb-4 text-white'>Resources</div>
                 <div className='flex flex-col gap-2 text-white opacity-70 text-base font-light'>
-                    <div>Blog</div>
-                    <div>Developers</div>
-                    <div>Support</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>Blog</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>Developers</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>Support</div>
                 </div>
             </div>
             <div>
                 <div className='font-semibold text-lg pb-4 text-white'>Company</div>
                 <div className='flex flex-col gap-2 text-white opacity-70 text-base font-light'>
-                    <div>About</div>
-                    <div>Our Team</div>
-                    <div>Careers</div>
-                    <div>Contact</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>About</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>Our Team</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>Careers</div>
+                    <div className='hover:text-cyan cursor-pointer transition-all duration-150 ease '>Contact</div>
                 </div>
             </div>
             <div className='flex gap-10 md:gap-5'>
@@ -49,4 +49,4 @@ const Footer = () => {
 
 export default Footer
 
-// TODO - Desktop active state for footer links and social icons
+// TODO - Desktop active state for social icons

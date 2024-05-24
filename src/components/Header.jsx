@@ -6,7 +6,7 @@ const Header = ({ handleToggleNav, toggleNav }) => {
   return (
     <div className="min-h-screen">
       <NavBar handleToggleNav={handleToggleNav} toggleNav={toggleNav} />
-      <div className="flex flex-col-reverse md:flex-row  items-center">
+      <div className="flex flex-col-reverse md:flex-row  items-center mb-[150px]">
         <div className="w-full md:w-1/2 h-auto md:px-[100px] text-center md:text-left p-5 md:p-0">
           <p className="text-[50px] text-veryDarkBlue font-bold leading-[70px] mb-3 md:w-full">More than just shorter links</p>
           <p className="text-gray font-medium md:w-full text-base leading-[25px] tracking-wide mb-10">Build your brand&apos;s recognition and get detailed insights on how your links are performing</p>

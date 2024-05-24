@@ -4,6 +4,8 @@ import BrandIcon from '../images/icon-brand-recognition.svg'
 import DetailIcon from '../images/icon-detailed-records.svg'
 import CustomizeIcon from '../images/icon-fully-customizable.svg'
 
+// TODO - Connect API endpoint, send a GET request for the entered link, get the response and send it as a prop to the ShortenedLink Component
+
 const Advanced = () => {
   return (
     <div className='p-5 md:p-20 relative bg-grayishViolet/[.1]'>
