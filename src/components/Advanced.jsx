@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Form from './Form'
 import ShortenedLink from './ShortenedLink'
 import BrandIcon from '../images/icon-brand-recognition.svg'
@@ -7,14 +8,31 @@ import CustomizeIcon from '../images/icon-fully-customizable.svg'
 // TODO - Connect API endpoint, send a GET request for the entered link, get the response and send it as a prop to the ShortenedLink Component
 
 const Advanced = () => {
+  const [shortenedLinks, setShortenedLinks] = useState([])
+
+  useEffect(() => {
+    const savedUrls = JSON.parse(localStorage.getItem('shortenedLinks')) || [];
+    setShortenedLinks(savedUrls);
+  }, []);
+
+
+  useEffect(() => {
+    localStorage.setItem('shortenedLinks', JSON.stringify(shortenedLinks));
+  }, [shortenedLinks]);
 
   const apiUrl = 'https://cleanuri.com/api/v1/shorten';
 
-  fetch()
+
   return (
     <div className='p-5 md:p-20 relative bg-grayishViolet/[.1]'>
-      <Form />
-      <ShortenedLink />
+      <Form shortenedLinks = {shortenedLinks} setShortenedLinks={setShortenedLinks}  />
+
+    {
+      shortenedLinks.map((shortenedLink, index) => (
+        <ShortenedLink shortenedLink = {shortenedLink} key={index}  />
+      ) )
+    }
+
 
       <div className='mt-40 flex flex-col items-center'>
         <p className='text-veryDarkViolet text-3xl font-bold text-center'>Advanced Statistics</p>
